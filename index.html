@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,interactive-widget=resizes-content">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: mediastream:; manifest-src 'self'; worker-src 'self'; connect-src wss://broker.emqx.io:8084 wss://broker.hivemq.com:8884 wss://test.mosquitto.org:8081 wss://broker-cn.emqx.io:8084 wss://mqtt-dashboard.com:8884 https://ntfy.sh; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#050608">
+<meta name="color-scheme" content="dark light">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<title>☢️nuke.chat</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20x='50'%20y='54'%20font-size='84'%20text-anchor='middle'%20dominant-baseline='middle'%3E%F0%9F%92%AC%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20x='50'%20y='54'%20font-size='84'%20text-anchor='middle'%20dominant-baseline='middle'%3E%F0%9F%92%AC%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5z"/><rect x="1" y="5" width="15" height="14" rx="2"/></symbol>
+<symbol id="i-video-off" viewBox="0 0 24 24"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10"/><path d="M1 1l22 22"/></symbol>
+<symbol id="i-screen" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4M9 11l3-3 3 3M12 8v6"/></symbol>
+<symbol id="i-shrink" viewBox="0 0 24 24"><path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="M3 21l3.5-.9L19 7.6a2.1 2.1 0 0 0-3-3L3.9 17.1z"/><path d="M14.5 6.5l3 3"/></symbol>
+<symbol id="i-flip" viewBox="0 0 24 24"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.5 9a9 9 0 0 1 14.9-3.4L23 10M1 14l4.6 4.4A9 9 0 0 0 20.5 15"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+<symbol id="i-mic-off" viewBox="0 0 24 24"><path d="M9 9v2a3 3 0 0 0 5.1 2.1M15 9.3V6a3 3 0 0 0-5.9-.8"/><path d="M5 11a7 7 0 0 0 11.3 5.5M19 11a7 7 0 0 1-.6 2.8M12 18v3M3 3l18 18"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></symbol>
+<symbol id="i-clip" viewBox="0 0 24 24"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></symbol>
+<symbol id="i-speaker" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></symbol>
+<symbol id="i-ear" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+<symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M7 12h10"/></symbol>
+<symbol id="i-paste" viewBox="0 0 24 24"><path d="M9 4H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1"/><path d="M12 10v6M9.5 13.5 12 16l2.5-2.5"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></symbol>
+<symbol id="i-reply" viewBox="0 0 24 24"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 6 6v3"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 10v6M14 10v6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.800"/><path d="M21 16l-5-5-8 9"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.600 7.100L4 20l1-4.600A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 11 12 15.5 16.5 11M5 20h14"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+</defs></svg>
+<div class="app" id="app">
+
+  <section class="screen active" id="s-list">
+    <header class="top lg">
+      <div class="brand"><div class="logo">💬</div><h1 data-t="appName">☢️nuke.chat</h1></div>
+      <button class="ib" id="btnSettings" data-ta="settings"><svg class="ic"><use href="#i-gear"/></svg></button>
+    </header>
+    <div class="list" id="chatList"></div>
+  </section>
+
+  <section class="screen" id="s-connect">
+    <header class="top">
+      <button class="ib" data-back data-ta="back"><svg class="ic"><use href="#i-back"/></svg></button>
+      <div class="tt"><h1 id="cTitle"></h1><small id="cSub"></small></div>
+    </header>
+    <div class="scroll">
+      <div class="seg" id="seg"><i></i><button id="tabCreate" class="on" data-t="tabCreate">Create</button><button id="tabJoin" data-t="tabJoin">Join</button></div>
+      <p class="note hidden" id="ipNote" data-t="ipNote" style="margin:0 0 10px"></p>
+      <div class="stat hidden" id="cStat"><i></i><span id="cStatT"></span></div>
+
+      <div id="pCreate">
+        <div class="card step">
+          <div class="num">1</div>
+          <div class="sb">
+            <h2 data-t="c1h">Create an invitation</h2>
+            <p data-t="c1p">Show the QR to your contact or send them the code or link.</p>
+            <div class="opt"><span data-t="passProt">Protect with password</span><label class="sw"><input type="checkbox" id="passOn" data-ta="passProt"><i></i></label></div>
+            <input class="field hidden" id="passC" type="password" data-tp="passPh" autocomplete="off" style="margin-top:8px">
+            <button class="btn" id="btnGen" data-t="gen">Create invitation</button>
+            <div id="offerBox" class="hidden">
+              <p class="note" id="ttlNote" style="margin:10px 0 0"></p>
+              <div class="qrbox" id="offerQr"></div>
+              <textarea id="offerOut" readonly></textarea>
+              <div class="btns"><button class="btn sec small" data-copy="offerOut"><svg class="ic sm"><use href="#i-copy"/></svg><span data-t="code">Code</span></button><button class="btn sec small" id="btnLinkCopy"><svg class="ic sm"><use href="#i-link"/></svg><span data-t="link">Link</span></button><button class="btn sec small" data-share="offerOut"><svg class="ic sm"><use href="#i-share"/></svg><span data-t="share">Send</span></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="card step hidden" id="cardAnswer">
+          <div class="num">2</div>
+          <div class="sb">
+            <h2 data-t="c2h">Get the reply</h2>
+            <p data-t="c2p">Paste your contact's code or scan their QR. The connection comes up by itself.</p>
+            <button class="btn" id="btnScanAnswer"><svg class="ic sm"><use href="#i-scan"/></svg><span data-t="scanAns">Scan reply QR</span></button>
+            <div class="pastew"><textarea id="answerIn" data-tp="ansPh"></textarea><button type="button" class="pastebtn" data-paste="answerIn" data-ta="pwPaste"><svg class="ic"><use href="#i-paste"/></svg></button></div>
+            <button class="btn sec" id="btnApply" data-t="connectBtn">Connect</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="pJoin" class="hidden">
+        <div class="card step">
+          <div class="num">1</div>
+          <div class="sb">
+            <h2 data-t="j1h">Get the invitation</h2>
+            <p data-t="j1p">Paste the code or invitation link from the chat creator, or scan the QR.</p>
+            <button class="btn" id="btnScanOffer"><svg class="ic sm"><use href="#i-scan"/></svg><span data-t="scanOff">Scan invitation QR</span></button>
+            <div class="pastew"><textarea id="offerIn" data-tp="offPh"></textarea><button type="button" class="pastebtn" data-paste="offerIn" data-ta="pwPaste"><svg class="ic"><use href="#i-paste"/></svg></button></div>
+            <div id="passJw" class="hidden"><input class="field" id="passJ" type="password" data-tp="passJPh" autocomplete="off" style="margin-top:8px"></div>
+            <button class="btn sec" id="btnAnswer" data-t="mkAns">Create reply</button>
+          </div>
+        </div>
+        <div class="card step hidden" id="cardAnsOut">
+          <div class="num">2</div>
+          <div class="sb">
+            <h2 data-t="j2h">Show the reply to the creator</h2>
+            <p data-t="j2p">Give this code (or QR) to the creator. Do it right away: the longer the pause, the lower the chance to connect.</p>
+            <div class="qrbox" id="answerQr"></div>
+            <textarea id="answerOut" readonly></textarea>
+            <div class="btns"><button class="btn sec small" data-copy="answerOut"><svg class="ic sm"><use href="#i-copy"/></svg><span data-t="copy">Copy</span></button><button class="btn sec small" data-share="answerOut"><svg class="ic sm"><use href="#i-share"/></svg><span data-t="share">Send</span></button></div>
+          </div>
+        </div>
+      </div>
+      <p class="note" data-t="connNote">There is no server: only the two of you see the codes. Our own end-to-end encryption runs on top of the channel.</p>
+    </div>
+  </section>
+
+  <section class="screen" id="s-pw">
+    <header class="top">
+      <button class="ib" data-back data-ta="back"><svg class="ic"><use href="#i-back"/></svg></button>
+      <div class="tt"><h1 id="pwHd" data-t="pwH"></h1></div>
+    </header>
+    <div class="scroll">
+      <div class="card" id="pwChoice">
+        <h2 id="pwCT" data-t="pwT"></h2>
+        <p id="pwCP" data-t="pwP"></p>
+        <button class="big" id="pwModeC"><span class="bi"><svg class="ic"><use href="#i-plus"/></svg></span><span><b id="pwCb" data-t="pwCreate"></b><small id="pwCs" data-t="pwCreateS"></small></span></button>
+        <button class="big" id="pwModeJ"><span class="bi"><svg class="ic"><use href="#i-scan"/></svg></span><span><b data-t="pwJoin"></b><small data-t="pwJoinS"></small></span></button>
+        <button class="big" id="pwModeG"><span class="bi"><svg class="ic"><use href="#i-users"/></svg></span><span><b data-t="rmBtn"></b><small data-t="rmBtnS"></small></span></button>
+      </div>
+      <div class="card hidden" id="pwCard">
+        <h2 id="pwTT"></h2>
+        <p id="pwPP"></p>
+        <input class="field" id="pwPass" type="text" data-tp="pwPh" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="30" data-lpignore="true" data-1p-ignore="true" data-bwignore="true" data-form-type="other" autocorrect="off" style="font-family:ui-monospace,monospace;letter-spacing:.04em">
+        <p class="note" id="pwHint" style="margin:6px 0 0"></p>
+        <div class="opt pwC" id="pwXopt"><span data-t="passProt"></span><label class="sw"><input type="checkbox" id="pwXon" data-ta="passProt"><i></i></label></div>
+        <div class="hidden" id="pwXbox" style="margin-top:8px">
+          <p id="pwXl" style="margin:0 0 4px;min-height:18px;font-size:13px;line-height:18px;color:var(--bad)"></p>
+          <input class="field mask" id="pwX" type="text" data-tp="pwXPh" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="40" data-lpignore="true" data-1p-ignore="true" data-bwignore="true" data-form-type="other" autocorrect="off">
+          <p class="note" id="pwXn" data-t="pwXNote" style="margin:6px 0 0"></p>
+        </div>
+        <div class="btns pwC"><button class="btn sec small" id="pwGen"><svg class="ic sm"><use href="#i-bolt"/></svg><span data-t="pwGen"></span></button><button class="btn sec small" id="pwCopy"><svg class="ic sm"><use href="#i-copy"/></svg><span data-t="copy"></span></button></div>
+        <div class="btns pwC"><button class="btn sec small" id="pwQr"><svg class="ic sm"><use href="#i-scan"/></svg><span data-t="pwQr"></span></button><button class="btn sec small" id="pwLink"><svg class="ic sm"><use href="#i-copy"/></svg><span data-t="pwLink"></span></button></div>
+        <div class="btns pwJ"><button class="btn sec small" id="pwPaste"><svg class="ic sm"><use href="#i-paste"/></svg><span data-t="pwPaste"></span></button><button class="btn sec small" id="pwScan"><svg class="ic sm"><use href="#i-scan"/></svg><span data-t="pwScan"></span></button></div>
+        <div class="stat hidden" id="pwStat" style="margin-top:12px"><i></i><span id="pwStatT"></span></div>
+        <button class="btn" id="pwGo" data-t="pwGo"></button>
+        <button class="btn sec hidden" id="pwCancel" data-t="cancel"></button>
+      </div>
+      <div class="flow hidden" id="pwFlow">
+        <h2 class="fh" data-t="flowH"></h2>
+        <div class="flowviz" id="fviz"></div>
+        <div class="fnow"><b id="fnowT"></b><small id="fnowD"></small></div>
+        <button class="lnk" id="fMore"></button>
+        <ol class="fsteps hidden" id="fsteps"></ol>
+        <div class="stat hidden" id="fdet"><i></i><span id="fdetT"></span></div>
+        <p class="note hidden" id="fHint"></p>
+        <button class="btn sec" id="fCancel" data-t="cancel"></button>
+        <button class="btn hidden" id="fRetry" data-t="flowRetry"></button>
+      </div>
+      <p class="note" data-t="pwNote"></p>
+    </div>
+  </section>
+
+  <section class="screen" id="s-chat">
+    <header class="top">
+      <button class="ib xr" data-back data-ta="back"><svg class="ic"><use href="#i-close"/></svg></button>
+      <div class="ttl" id="chInfo"><div class="av" id="chAv"></div><div class="tx"><div class="nm"><b id="chName">…</b><svg class="ic lk hidden" id="chLk"><use href="#i-lock"/></svg></div><small id="chSt"></small><small id="chMe" class="meNick"></small></div></div>
+      <button class="ib trash" id="btnTrash" data-ta="shDelBtn"><svg class="ic"><use href="#i-trash"/></svg></button>
+      <button class="ib" id="btnVideo" data-ta="videoCallBtn"><svg class="ic"><use href="#i-video"/></svg></button>
+      <button class="ib" id="btnCall" data-ta="call"><svg class="ic"><use href="#i-phone"/></svg></button>
+    </header>
+    <div class="incoming hidden" id="incoming"><div class="av" id="incAv"></div><div class="it"><b id="incTxt"></b><small id="incSub"></small></div>
+  <button class="no" id="incNo" data-ta="decline"><svg class="ic"><use href="#i-phone"/></svg></button><button class="yes" id="incYes" data-ta="accept"><svg class="ic"><use href="#i-phone"/></svg></button></div>
+    <div class="callpill hidden" id="callPill" role="button"><span class="live"></span><b id="pillTxt"></b><button class="pb" id="pillMute" aria-label="mic"></button><button class="pb" id="pillCam" aria-label="camera"></button><button class="x" id="pillEnd" data-ta="endCall"><svg class="ic"><use href="#i-phone"/></svg></button></div>
+    <div class="log" id="log"></div>
+    <div class="shgate hidden" id="shGate"><div class="shcard">
+      <h2 data-t="shGateH"></h2><p data-t="shGateP"></p>
+      <div class="sas" id="shSas"></div>
+      <p class="note hidden" id="shWait"></p>
+      <button class="btn" id="shYes" data-t="shYes"></button><button class="btn danger" id="shNo" data-t="shNo"></button>
+    </div></div>
+    <div class="fxov hidden" id="fxOv"><div class="flowviz" id="fxViz"></div><p id="fxT"></p><button class="btn sec" id="fxCancel" data-t="cancel"></button></div>
+    <div class="offline hidden" id="offline"><span id="offTxt" data-t="noLink">Connection closed</span><button class="btn" id="btnReconnect" data-t="flowNew">New chat</button></div>
+    <form class="composer" id="form" autocomplete="off">
+      <button type="button" class="ib mutec" id="btnAttach" data-ta="file"><svg class="ic"><use href="#i-clip"/></svg></button>
+      <input type="file" id="file" class="hidden" multiple>
+      <textarea id="text" rows="1" data-tp="msgPh" enterkeyhint="send" autocomplete="off" autocorrect="on"></textarea>
+      <button class="send" id="btnSend" data-ta="send"><svg class="ic"><use href="#i-send"/></svg></button>
+    </form>
+  </section>
+
+  <section class="screen" id="s-room">
+    <header class="top">
+      <button class="ib xr" id="rmBack" data-ta="back"><svg class="ic"><use href="#i-close"/></svg></button>
+      <div class="ttl"><div class="tx"><div class="nm"><b id="rmTitle"></b><svg class="ic lk" id="rmLock" style="color:var(--ok);cursor:pointer"><use href="#i-lock"/></svg></div><small id="rmSt"></small><small id="rmMe" class="meNick"></small></div></div>
+      <button class="ib" id="rmInvite" data-ta="rmInvite"><svg class="ic"><use href="#i-plus"/></svg></button>
+      <button class="ib" id="rmCall" data-ta="call"><svg class="ic"><use href="#i-phone"/></svg></button>
+    </header>
+    <div class="rmbar" id="rmBar"></div>
+    <div class="rmtiles hidden" id="rmTiles"></div>
+    <div class="rmctl hidden" id="rmCtl">
+      <button class="cb" id="rmMute" data-ta="mic"><i><svg class="ic"><use href="#i-mic"/></svg></i></button>
+      <button class="cb end" id="rmHang" data-ta="endCall"><i><svg class="ic"><use href="#i-phone"/></svg></i></button>
+    </div>
+    <div class="log" id="rmLog"></div>
+    <form class="composer" id="rmForm" autocomplete="off">
+      <textarea id="rmText" rows="1" data-tp="msgPh" enterkeyhint="send" autocomplete="off" autocorrect="on"></textarea>
+      <button class="send" id="rmSend" data-ta="send"><svg class="ic"><use href="#i-send"/></svg></button>
+    </form>
+  </section>
+</div>
+
+<audio id="remoteAudio" autoplay playsinline></audio>
+
+<section class="call hidden" id="call">
+  <video class="rv hidden" id="remVid" autoplay playsinline muted></video>
+  <video class="lv hidden" id="locVid" autoplay playsinline muted></video>
+  <button class="cmin" id="callMin" data-ta="minimize"><svg class="ic"><use href="#i-down"/></svg></button>
+  <button class="cshrink" id="btnShrink" data-ta="shrink"><svg class="ic"><use href="#i-shrink"/></svg></button>
+  <div class="cbody"><div class="av" id="callAv"></div><h2 id="callName">…</h2><p class="cst" id="callSt"></p><p class="cnote" id="callNote"></p></div>
+  <div class="vol" id="volBox"><button class="volb" id="volBtn" data-ta="volume" aria-expanded="false"><svg class="ic"><use href="#i-speaker"/></svg></button><div class="vols"><input type="range" id="vol" min="0" max="300" value="100" data-ta="volume"><span id="volV">100%</span></div></div>
+  <div class="cbtns">
+    <button class="cb" id="btnMute"><i><svg class="ic"><use href="#i-mic"/></svg></i><span data-t="mic">Microphone</span></button>
+    <button class="cb" id="btnCam"><i><svg class="ic"><use href="#i-video-off"/></svg></i><span data-t="camera">Camera</span></button>
+    <button class="cb hidden" id="btnFlip"><i><svg class="ic"><use href="#i-flip"/></svg></i><span data-t="flip">Flip</span></button>
+    <button class="cb hidden" id="btnScr"><i><svg class="ic"><use href="#i-screen"/></svg></i><span id="scrLbl" data-t="scr">Screen</span></button>
+    <button class="cb hidden" id="btnPen"><i><svg class="ic"><use href="#i-pen"/></svg></i><span data-t="pen">Draw</span></button>
+    <button class="cb end" id="btnHang"><i><svg class="ic"><use href="#i-phone"/></svg></i><span data-t="endCall">End call</span></button>
+  </div>
+</section>
+
+<div class="scanner hidden" id="scanner"><video id="vid" playsinline muted></video><div class="frame"></div>
+  <div class="scanhint" id="scanHint"></div>
+  <div class="scanbtns"><button id="scanGallery" data-t="fromPhoto">From photo</button><button id="scanClose" data-t="close">Close</button></div>
+  <input type="file" id="scanFile" accept="image/*" class="hidden"></div>
+<div class="viewer hidden" id="viewer" role="dialog" aria-modal="true">
+  <div class="vbar"><button class="vb" id="vwClose" data-ta="close"><svg class="ic"><use href="#i-close"/></svg></button><span class="vname" id="vwName"></span><button class="vb" id="vwSave" data-ta="saveImg"><svg class="ic"><use href="#i-download"/></svg></button></div>
+  <div class="vstage" id="vwStage"><img id="vwImg" alt="" draggable="false"></div>
+</div>
+<div class="sheetbg hidden" id="sheetBg"><div class="sheet" id="sheet"></div></div>
+<div class="zbox" id="zoomBox"><span class="zval" id="zoomV">×1</span><button type="button" class="zstep" id="zoomPlus" aria-label="Zoom in">+</button><div class="ztrk" id="zoomTrk" role="slider" aria-orientation="vertical" aria-label="Zoom" aria-valuenow="1"><div class="zfill" id="zoomFill"></div><div class="zthumb" id="zoomThumb"></div></div><button type="button" class="zstep" id="zoomMinus" aria-label="Zoom out">−</button></div>
+<div class="toast hidden" id="toast"></div>
+
+<script src="js/vendor/qrcode.js"></script>
+<script src="js/vendor/jsqr.js"></script>
+<script src="js/crypto.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/core.js"></script>
+<script src="js/share.js"></script>
+<script src="js/webrtc.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/quickchat.js"></script>
+<script src="js/room.js"></script>
+<script src="js/replies.js"></script>
+<script src="js/calls.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/mobile.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
