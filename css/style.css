@@ -39,7 +39,7 @@ input,textarea,.sas,code,.selectable{-webkit-user-select:text;user-select:text}
 .top .tt{flex:1;min-width:0;padding-left:4px}
 .top .tt small{display:block;color:var(--mut);font-size:13px;margin-top:-2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .top.lg{min-height:64px;box-shadow:none;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
-.top.lg .brand{flex:1;min-width:0;display:flex;align-items:center;gap:10px;padding-left:8px}
+.top.lg .brand{flex:1;min-width:0;display:flex;align-items:center;gap:10px;padding-left:16px}
 .top.lg h1{font-size:30px;font-weight:800;letter-spacing:-.8px}
 .logo{font-size:30px;line-height:1;flex:none}
 .ib{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--acc);flex:none;transition:background .15s,transform .1s}
@@ -588,3 +588,5 @@ body.drawing .call>video{cursor:crosshair}
 .swic.go{background:var(--acc);color:#fff}
 .sheetbg{inset:var(--vvt,0px) 0 auto 0;height:var(--vvh,100%)}
 .sheet{max-height:94%!important}
+.qm{flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--mut);font:600 16px/1 inherit;font-family:inherit;display:grid;place-items:center;cursor:pointer;padding:0}
+.qm:active{transform:scale(.92)}

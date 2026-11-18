@@ -1,4 +1,4 @@
-# ☢️nuke.chat
+# nuke.chat
 
 Serverless P2P chat: WebRTC DataChannel plus a custom end-to-end encryption layer, quick chat with a one-time password
 (peers find each other through public MQTT relays), manual connection via QR/code, files, 1:1 calls and group rooms.
@@ -19,6 +19,7 @@ js/room.js            group room: #g= invitations, full mesh, key epochs, call
 js/replies.js         message replies (quote, swipe right) and reactions 👍❤️😂😮😢🙏🔥👎, private chat and room
 js/calls.js           1:1 calls, video, gestures
 js/mobile.js          mobile: keyboard, page zoom
+js/portable.js        "Download portable" button: builds a single-file index.html
 js/main.js            startup
 sw.js, manifest.webmanifest, icon-*.png    PWA
 ```

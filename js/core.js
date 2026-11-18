@@ -357,6 +357,7 @@ $('btnSettings').onclick = () => { openSheet(
    <div class="srow"><div class="sr-t"><b>${esc(t('setTyp'))}</b><small>${esc(t('setTypS'))}</small></div><label class="sw"><input type="checkbox" id="setTyp"><i></i></label></div>
    ${window.AndroidBridge ? `<div class="srow"><div class="sr-t"><b>${esc(t('setNtxt'))}</b><small>${esc(t('setNtxtS'))}</small></div><label class="sw"><input type="checkbox" id="setNtxt"><i></i></label></div>` : ''}
    <div class="srow" style="display:block"><b style="display:block;margin-bottom:8px">${esc(t('theme'))}</b><div class="seg" id="setTheme" data-v="0"><i></i><button data-v="dark">${esc(t('thDark'))}</button><button data-v="light">${esc(t('thLight'))}</button></div></div>
+   <div class="srow"><div class="sr-t"><b>${esc(t('dlH'))}</b><small>${esc(t('dlS'))}</small></div><button class="btn sec small" id="dlPortable" style="width:auto;margin:0">${esc(t('dlBtn'))}</button><button type="button" class="qm" id="dlHelp" aria-label="${esc(t('dlHelpH'))}">?</button></div>
    <details class="adv"><summary>${esc(t('advanced'))}</summary>
    <div class="srow"><div class="sr-t"><b>${esc(t('setStun'))}</b><small>${esc(t('setStunS'))}</small></div><label class="sw"><input type="checkbox" id="setStun"><i></i></label></div>
    <div class="srow"><div class="sr-t"><b>${esc(t('setRelay'))}</b><small>${esc(t('setRelayS'))}</small></div><label class="sw"><input type="checkbox" id="setRelay"><i></i></label></div>
@@ -373,6 +374,8 @@ $('btnSettings').onclick = () => { openSheet(
     { const e = s.querySelector('#setRelay'); e.checked = !!cfg.relay; e.onchange = () => { const ice = s.querySelector('#setIce').value; if (e.checked && !/^\s*turns?:/mi.test(ice)) { e.checked = false; toast(t('relayNeedTurn'), 4500); return; } cfg.relay = e.checked; cfg.ice = ice; }; }
     segBind(s.querySelector('#setTheme'), ['dark', 'light'], () => cfg.theme, v => { cfg.theme = v; applyTheme(); });
     s.querySelector('#dbgCopy').onclick = async () => { try { await navigator.clipboard.writeText(DBG.join('\n')); toast(t('copied')); } catch { toast(t('copyFail')); } };
+    s.querySelector('#dlPortable').onclick = downloadPortable;
+    s.querySelector('#dlHelp').onclick = () => { closeSheet(); setTimeout(portableHelpSheet, 380); };
     s.querySelector('#netOpen').onclick = () => { closeSheet(); setTimeout(netSheet, 380); };
     s.querySelector('#setOk').onclick = closeSheet;
   },

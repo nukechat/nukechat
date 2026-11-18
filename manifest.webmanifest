@@ -1,5 +1,5 @@
 {
-  "name": "☢️nuke.chat",
+  "name": "nuke.chat",
   "short_name": "nuke.chat",
   "description": "Serverless P2P chat with end-to-end encryption, file transfer and group calls",
   "start_url": "./",

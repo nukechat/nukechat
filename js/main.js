@@ -11,7 +11,7 @@ async function handleInvite(code) {
 }
 applyI18n(); applyTheme();
 wipeLegacy();
-if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
+if ('serviceWorker' in navigator && document.querySelector('script[src]') && (location.protocol === 'https:' || location.hostname === 'localhost')) addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
 if (!(window.crypto && crypto.subtle)) { document.body.textContent = 'Web Crypto unavailable'; throw new Error('Web Crypto unavailable'); }
 me.name = randomNick();
 renderList(); setOnline(false); callUi();

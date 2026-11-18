@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,interactive-widget=resizes-content">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: mediastream:; manifest-src 'self'; worker-src 'self'; connect-src wss://broker.emqx.io:8084 wss://broker.hivemq.com:8884 wss://test.mosquitto.org:8081 wss://broker-cn.emqx.io:8084 wss://mqtt-dashboard.com:8884 https://ntfy.sh; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: mediastream:; manifest-src 'self'; worker-src 'self'; connect-src 'self' wss://broker.emqx.io:8084 wss://broker.hivemq.com:8884 wss://test.mosquitto.org:8081 wss://broker-cn.emqx.io:8084 wss://mqtt-dashboard.com:8884 https://ntfy.sh; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#050608">
 <meta name="color-scheme" content="dark light">
@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
-<title>☢️nuke.chat</title>
+<title>nuke.chat</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20x='50'%20y='54'%20font-size='84'%20text-anchor='middle'%20dominant-baseline='middle'%3E%F0%9F%92%AC%3C/text%3E%3C/svg%3E">
@@ -61,7 +61,7 @@
 
   <section class="screen active" id="s-list">
     <header class="top lg">
-      <div class="brand"><div class="logo">💬</div><h1 data-t="appName">☢️nuke.chat</h1></div>
+      <div class="brand"><div class="logo">💬</div><h1 data-t="appName">nuke.chat</h1></div>
       <button class="ib" id="btnSettings" data-ta="settings"><svg class="ic"><use href="#i-gear"/></svg></button>
     </header>
     <div class="list" id="chatList"></div>
@@ -273,6 +273,7 @@
 <script src="js/calls.js"></script>
 <script src="js/draw.js"></script>
 <script src="js/mobile.js"></script>
+<script src="js/portable.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
