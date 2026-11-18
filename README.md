@@ -1,5 +1,8 @@
 # nuke.chat
 
+[Website](https://nuke.chat) · [GitHub](https://github.com/nukechat/nukechat) · [Telegram](https://t.me/nukedotchat) · [X / Twitter](https://x.com/nukechat)
+
+
 Serverless P2P chat: WebRTC DataChannel plus a custom end-to-end encryption layer, quick chat with a one-time password
 (peers find each other through public MQTT relays), manual connection via QR/code, files, 1:1 calls and group rooms.
 
@@ -44,3 +47,8 @@ the connection and wipes everything (on both sides).
 Long-press (or right-click) on a message opens a menu: a row of emoji reactions, "Reply", "Copy", "Delete". On a phone a message
 can be swiped right, which also means "reply". The quote travels with the message (`msg.rp`), a reaction is a separate frame `{t:'react', id, e}`;
 in a room both travel inside the message encrypted with the group key. Deleting a message also erases its quotes in other bubbles. Nothing is stored.
+
+## Community
+- Telegram: https://t.me/nukedotchat
+- X (Twitter): https://x.com/nukechat
+- Source code: https://github.com/nukechat/nukechat

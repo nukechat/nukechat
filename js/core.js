@@ -1,4 +1,5 @@
 'use strict';
+const BASE_TITLE = document.title;
 const $ = id => document.getElementById(id);
 const te = new TextEncoder(), td = new TextDecoder();
 function wipeLegacy() {
@@ -55,7 +56,6 @@ function applyI18n() {
   document.querySelectorAll('[data-t]').forEach(e => { if (has(e.dataset.t)) e.textContent = t(e.dataset.t); });
   document.querySelectorAll('[data-tp]').forEach(e => { if (has(e.dataset.tp)) e.placeholder = t(e.dataset.tp); });
   document.querySelectorAll('[data-ta]').forEach(e => { if (has(e.dataset.ta)) e.setAttribute('aria-label', t(e.dataset.ta)); });
-  document.title = t('appName');
   drawViz();
 }
 
@@ -358,6 +358,7 @@ $('btnSettings').onclick = () => { openSheet(
    <div class="srow"><div class="sr-t"><b>${esc(t('setTyp'))}</b><small>${esc(t('setTypS'))}</small></div><label class="sw"><input type="checkbox" id="setTyp"><i></i></label></div>
    ${window.AndroidBridge ? `<div class="srow"><div class="sr-t"><b>${esc(t('setNtxt'))}</b><small>${esc(t('setNtxtS'))}</small></div><label class="sw"><input type="checkbox" id="setNtxt"><i></i></label></div>` : ''}
    <div class="srow" style="display:block"><b style="display:block;margin-bottom:8px">${esc(t('theme'))}</b><div class="seg" id="setTheme" data-v="0"><i></i><button data-v="dark">${esc(t('thDark'))}</button><button data-v="light">${esc(t('thLight'))}</button></div></div>
+   <div class="srow"><div class="sr-t"><b>${esc(t('srcH'))}</b><small>${esc(t('srcS'))}</small></div><a class="btn sec small" href="https://github.com/nukechat/nukechat" target="_blank" rel="noopener noreferrer" style="width:auto;margin:0;text-decoration:none">${esc(t('srcBtn'))}</a></div>
    <div class="srow"><div class="sr-t"><b>${esc(t('dlH'))}</b><small>${esc(t('dlS'))}</small></div><button class="btn sec small" id="dlPortable" style="width:auto;margin:0">${esc(t('dlBtn'))}</button><button type="button" class="qm" id="dlHelp" aria-label="${esc(t('dlHelpH'))}">?</button></div>
    <details class="adv"><summary>${esc(t('advanced'))}</summary>
    <div class="srow"><div class="sr-t"><b>${esc(t('setStun'))}</b><small>${esc(t('setStunS'))}</small></div><label class="sw"><input type="checkbox" id="setStun"><i></i></label></div>

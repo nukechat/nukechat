@@ -262,7 +262,7 @@ function setTyping(on) {
   if (on) typingT = setTimeout(() => setTyping(false), 3000);
 }
 function notify(text, kind, who) {
-  if (document.hidden) { vib(80); document.title = '● ' + t('appName'); }
+  if (document.hidden) { vib(80); document.title = '● ' + BASE_TITLE; }
   if (kind !== 'quiet' && (document.hidden || window.AndroidBridge)) appNotify(kind || 'msg', text, who);
 }
 function appNotify(kind, text, who) {
@@ -273,7 +273,7 @@ function appNotify(kind, text, who) {
     AndroidBridge.notify(kind, String(title), body);
   } catch {}
 }
-document.addEventListener('visibilitychange', () => { if (!document.hidden) document.title = t('appName'); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden) document.title = BASE_TITLE; });
 
 const canSend = () => !!(hello && session && liveConn() && peer && shReady());
 const MEM_CAP = 500 * 1024 ** 2, CHUNK = 60000;

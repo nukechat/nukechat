@@ -1,7 +1,7 @@
 {
   "name": "nuke.chat",
   "short_name": "nuke.chat",
-  "description": "Serverless P2P chat with end-to-end encryption, file transfer and group calls",
+  "description": "Serverless P2P messenger: end-to-end encrypted chat, file transfer between devices, calls and group rooms. No accounts, nothing stored.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
