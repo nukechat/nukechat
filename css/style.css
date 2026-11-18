@@ -590,3 +590,15 @@ body.drawing .call>video{cursor:crosshair}
 .sheet{max-height:94%!important}
 .qm{flex:none;width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--mut);font:600 16px/1 inherit;font-family:inherit;display:grid;place-items:center;cursor:pointer;padding:0}
 .qm:active{transform:scale(.92)}
+.wpbtn{margin-top:8px}
+.wp{margin:4px 0 14px;text-align:left}
+.wp-h{font-size:16px;font-weight:700;margin:18px 0 6px}
+.wp-p{font-size:14px;line-height:1.5;color:var(--mut);margin:0 0 8px}
+.wp-l{margin:0 0 8px;padding-left:20px;font-size:14px;line-height:1.5;color:var(--mut)}
+.wp-l li{margin-bottom:6px}
+.wp-l b{color:var(--txt)}
+.wp-t{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:6px 0 10px}
+.wp-t div{display:flex;gap:12px;padding:10px 12px;font-size:13px;line-height:1.4;border-top:1px solid var(--line)}
+.wp-t div:first-child{border-top:0}
+.wp-t b{flex:0 0 108px;font-weight:600}
+.wp-t span{flex:1;color:var(--mut)}

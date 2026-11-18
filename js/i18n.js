@@ -450,6 +450,8 @@ youAre:'You: {n}',   pasteFail: "Clipboard is empty or unavailable: paste the co
   dlHelpP1: "It is the entire app (markup, styles and all scripts) packed into a single index.html file.",
   dlHelpP2: "Upload that one file to any static hosting (Cloudflare Pages, GitHub Pages, Netlify, your own nginx) and the chat works there exactly like here. No server code, database or build step is needed.",
   dlHelpP3: "Serve it over HTTPS: browsers require it for calls, the camera and secure encryption APIs. Chats stay peer-to-peer, the host only delivers this file.",
+  wpBtn: "White paper",
+  wpTitle: "nuke.chat white paper",
   setRecv: "Read receipts",
   setRecvS: "Your contact sees that you read a message",
   setTyp: "Typing indicator",

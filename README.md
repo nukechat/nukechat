@@ -19,6 +19,7 @@ js/room.js            group room: #g= invitations, full mesh, key epochs, call
 js/replies.js         message replies (quote, swipe right) and reactions 👍❤️😂😮😢🙏🔥👎, private chat and room
 js/calls.js           1:1 calls, video, gestures
 js/mobile.js          mobile: keyboard, page zoom
+js/whitepaper.js      English white paper shown from the home screen
 js/portable.js        "Download portable" button: builds a single-file index.html
 js/main.js            startup
 sw.js, manifest.webmanifest, icon-*.png    PWA

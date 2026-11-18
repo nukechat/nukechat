@@ -342,8 +342,9 @@ function renderList() {
       <button class="btn sec" id="heroShare">${ic('file', 'sm')}${esc(t('heroShare'))}</button>
       <button class="btn sec" id="heroManual">${ic('lock', 'sm')}${esc(t('heroManual'))}</button>
       <div class="chips"><span class="chip">${ic('shield')}${esc(t('chipE2E'))}</span><span class="chip">${ic('bolt')}${esc(t('chipDirect'))}</span><span class="chip">${ic('phone')}${esc(t('chipCalls'))}</span><span class="chip">${ic('lock')}${esc(t('chipNoAcc'))}</span></div>
-      <button class="donate" id="heroDonate">${esc('❤ ' + t('donate'))}</button></div>`;
-  $('heroManual').onclick = () => startConnect('create'); $('heroPw').onclick = () => openPw(); $('heroShare').onclick = () => openPw(null, 'share'); $('heroDonate').onclick = donateSheet;
+      <button class="donate" id="heroDonate">${esc('❤ ' + t('donate'))}</button>
+      <button class="donate wpbtn" id="heroPaper">${esc('📄 ' + t('wpBtn'))}</button></div>`;
+  $('heroManual').onclick = () => startConnect('create'); $('heroPw').onclick = () => openPw(); $('heroShare').onclick = () => openPw(null, 'share'); $('heroDonate').onclick = donateSheet; $('heroPaper').onclick = whitepaperSheet;
 }
 
 function segBind(root, vals, get, set) {

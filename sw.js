@@ -1,5 +1,5 @@
 const CACHE = 'nuke-chat-v51';
-const FILES = ['./', 'index.html', 'css/style.css', 'js/vendor/qrcode.js', 'js/vendor/jsqr.js', 'js/crypto.js', 'js/i18n.js', 'js/core.js', 'js/share.js', 'js/webrtc.js', 'js/chat.js', 'js/quickchat.js', 'js/room.js', 'js/replies.js', 'js/calls.js', 'js/draw.js', 'js/mobile.js', 'js/portable.js', 'js/main.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
+const FILES = ['./', 'index.html', 'css/style.css', 'js/vendor/qrcode.js', 'js/vendor/jsqr.js', 'js/crypto.js', 'js/i18n.js', 'js/core.js', 'js/share.js', 'js/webrtc.js', 'js/chat.js', 'js/quickchat.js', 'js/room.js', 'js/replies.js', 'js/calls.js', 'js/draw.js', 'js/mobile.js', 'js/whitepaper.js', 'js/portable.js', 'js/main.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));
